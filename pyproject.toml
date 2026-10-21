@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "audio-recommender-system"
+version = "0.1.0"
+description = "Local hybrid music recommender using audio features and metadata"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "rich>=13.7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.11",
+]
+
+[project.scripts]
+audio-recommender = "audio_recommender.cli:main"
+audio-recommender-ui = "audio_recommender.cli:interactive_main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100

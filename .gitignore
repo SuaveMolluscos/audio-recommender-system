@@ -218,3 +218,26 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local music catalogues and personal recommendations
+*.sqlite*
+*.db
+*.db-journal
+*.db-*
+*.wal
+*.shm
+*.parquet
+*.wav
+*.mp3
+*.flac
+*.m4a
+*.ogg
+data/
+catalog/
+exports/
+usuario.json
+user_profile.json
+
+# Python tooling
+.pytest_cache/
+.coverage
